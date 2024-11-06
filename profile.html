@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+         font-family: Arial, sans-serif;
+         background: linear-gradient(to bottom right, #f7f7f7, #ebebeb);
+        }
+        header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+header .logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+nav ul li {
+    margin-right: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+nav ul li a:hover{
+   color: lightcoral;
+}
+a.login-btn {
+    color: #fff;
+    text-decoration: none;
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+a.login-btn:hover {
+    background-color: lightcoral;
+}
+.profile-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+        h2 {
+            margin-bottom: 20px;
+            color: red;
+            font-size: 28px;
+        }
+        h3{
+         color: black;
+        }
+        /* Profile Picture Styling */
+.profile-picture {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+.profile-picture img:hover {
+    transform: scale(1.05);
+}
+
+/* Upload Button Styling */
+input[type="file"] {
+    margin-top: 10px;
+    font-size: 16px;
+}
+button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: lightcoral;
+}
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .profile-container {
+        margin: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+    </style>
+</head>
+<!-- Header Section -->
+<header>
+   <div class="logo">AutoLux International Co.</div>
+   <nav>
+       <ul>
+           <li><a href="index.html">Home</a></li>
+           <li><a href="#">About</a></li>
+           <li><a href="#">Catalogue</a></li>
+           <li><a href="#">Contact</a></li>
+       </ul>
+   </nav>
+   <a href="#" onclick="logout()" class="login-btn">Logout</a>
+</header>
+<body>
+    <section class="profile-container">
+        
+        <!-- Profile Picture Upload -->
+        <div class="profile-picture">
+         <h2>Your Profile Picture</h2>
+         <img id="profileImage" src="default-profile.png" alt="Profile Image" style="width:150px;height:150px;border-radius:50%;"><br>
+         <input type="file" id="imageUpload" accept="image/*"><br>
+         <button id="uploadButton" onclick="saveImage()">Upload Image</button>
+         <button id="changeButton" onclick="changeImage()" style="display:none;">Change Image</button>
+         <h3>Welcome, <span id="userName"></span>!</h3>
+       
+        
+     </div>
+    </section>
+
+    <script>
+        // Get the user's name from localStorage and display it
+        document.getElementById('userName').textContent = localStorage.getItem('userName');
+
+        function logout() {
+            // Clear localStorage and redirect back to login page
+            localStorage.removeItem('userName');
+            window.location.href = "Login.html";
+        }
+         // Check if an image is already stored and display it
+         const storedImage = localStorage.getItem('profileImage');
+        const profileImage = document.getElementById('profileImage');
+        if (storedImage) {
+            profileImage.src = storedImage;
+        }
+        // Function to handle file selection
+        function onFileSelect() {
+            document.getElementById('uploadButton').style.display = 'block';  // Show upload button
+        }
+
+        // Function to save the uploaded image
+        function saveImage() {
+            const fileInput = document.getElementById('imageUpload');
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onloadend = function() {
+                    localStorage.setItem('profileImage', reader.result);
+                    profileImage.src = reader.result; // Display the uploaded image immediately
+                }
+                reader.readAsDataURL(file); // Convert image to base64 format
+            }
+        }
+        
+        // Logout function to clear localStorage
+        function logout() {
+            localStorage.clear();
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

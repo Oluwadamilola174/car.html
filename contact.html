@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 0;
+        margin: 0;
+    }
+     /* Wrapper to make footer stick at the bottom */
+     .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    /* Header Styling */
+    header {
+        background-color: white;
+        color: red;
+        padding: 10px 0;
+        text-align: center;
+        position: relative;
+        font-weight: bold;
+    }
+
+    header .logo img {
+        height: 50px;
+        vertical-align: middle;
+    }
+
+    header nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin: 0 15px;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 10px 15px;
+        transition: background-color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+        background-color: lightcoral;
+        border-radius: 5px;
+    }
+
+    /* Social Media Icons */
+    .fa {
+        padding: 15px;
+        font-size: 30px;
+        width: 60px;
+        text-align: center;
+        text-decoration: none;
+        margin: 10px 5px;
+        border-radius: 50%;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .fa:hover {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+
+    .fa-google {
+        background: #dd4b39;
+        color: white;
+    }
+
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+    }
+
+    .fa-instagram {
+        background: #125688;
+        color: white;
+    }
+
+    /* Contact Section Styling */
+    h2 {
+        text-align: center;
+        margin: 30px 0;
+        font-size: 28px;
+        color: #333;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    /* Footer Styling */
+    footer {
+        background-color: red;
+        color: white;
+        padding: 15px 0;
+        text-align: center;
+        margin-top: auto;
+    }
+
+</style>
+</head>
+<body>
+  <div class="wrapper">
+<!-- Header Section -->
+<header>
+    <div class="logo">
+        <img src="image/loggo.png" alt="Logo"> AutoLux International Co.
+    </div>
+    <nav>
+        <ul>
+            <li><a href="car.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Catalogue</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Contact Section -->
+<h2>Contact Us on Our Social Media Platforms</h2>
+
+<div class="social-icons">
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+    <a href="#" class="fa fa-instagram"></a>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    &copy; 2024 AutoLux International Co. All Rights Reserved.
+</footer>
+</div>
+</body>
+</html>

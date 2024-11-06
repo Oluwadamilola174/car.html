@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Cars - AutoLux International Co.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="image/loggo.png" >AutoLux International Co.
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+         <a href="Login.html" class="login-btn"  id="authLink">Log in</a>
+    </header>
+
+    <!-- Sports Car Section -->
+    <section class="sports-car-section">
+      <div class="content">
+         <h1>EXCLUSIVE SPORTS CAR</h1>
+      </div>
+        <div class="car-container">
+            <!-- Car 1 -->
+            <div class="car-item">
+                <div class="car-image">
+                    <img src="image/bugatti.png" alt="Red Sports Car">
+                </div>
+                <div class="car-details">
+                    <h2>Bugatti</h2>
+                    <p>Price: $850,000</p>
+                    <div class="buttons">
+                        <a href="Purchase.html?car=Bugatti" class="btn buy-btn">Buy Now</a>
+                        <a href="#" class="btn rent-btn">Rent</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="car-item">
+                <div class="car-image">
+                    <img src="image/bmw.png" alt="White Sports Car">
+                </div>
+                <div class="car-details">
+                    <h2>BMW Coupe blue</h2>
+                    <p>Price: $1,000,000</p>
+                    <div class="buttons">
+                        <a href="#" class="btn buy-btn">Buy Now</a>
+                        <a href="#" class="btn rent-btn">Rent</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car 3 -->
+            <div class="car-item">
+                <div class="car-image">
+                    <img src="image/ferrari.png" alt="Black Sports Car">
+                </div>
+                <div class="car-details">
+                    <h2>Ferrari</h2>
+                    <p>Price: $700,000</p>
+                    <div class="buttons">
+                        <a href="#" class="btn buy-btn">Buy Now</a>
+                        <a href="#" class="btn rent-btn">Rent</a>
+                    </div>
+                </div>
+            </div>
+               <!-- Car 1 -->
+               <div class="car-item">
+                  <div class="car-image">
+                      <img src="image/red-car.png" alt="Red Sports Car">
+                  </div>
+                  <div class="car-details">
+                      <h2>Red Sports Car</h2>
+                      <p>Price: $950,000</p>
+                      <div class="buttons">
+                          <a href="#" class="btn buy-btn">Buy Now</a>
+                          <a href="#" class="btn rent-btn">Rent</a>
+                      </div>
+                  </div>
+              </div>
+                 <!-- Car 1 -->
+            <div class="car-item">
+               <div class="car-image">
+                   <img src="image/Mazda MX-5.png" alt="Red Sports Car">
+               </div>
+               <div class="car-details">
+                   <h2>Mazda MX-5</h2>
+                   <p>Price: $560,000</p>
+                   <div class="buttons">
+                       <a href="#" class="btn buy-btn">Buy Now</a>
+                       <a href="#" class="btn rent-btn">Rent</a>
+                   </div>
+               </div>
+           </div>
+              <!-- Car 1 -->
+              <div class="car-item">
+               <div class="car-image">
+                   <img src="image/Jaguar F-Type.png" alt="Red Sports Car">
+               </div>
+               <div class="car-details">
+                   <h2>Jaguar F-Type</h2>
+                   <p>Price: $900,000</p>
+                   <div class="buttons">
+                       <a href="#" class="btn buy-btn">Buy Now</a>
+                       <a href="#" class="btn rent-btn">Rent</a>
+                   </div>
+               </div>
+           </div>
+              <!-- Car 1 -->
+              <div class="car-item">
+               <div class="car-image">
+                   <img src="image/Lotus Emira-car.png" alt="Red Sports Car">
+               </div>
+               <div class="car-details">
+                   <h2>Lotus Emira</h2>
+                   <p>Price: $600,000</p>
+                   <div class="buttons">
+                       <a href="#" class="btn buy-btn">Buy Now</a>
+                       <a href="#" class="btn rent-btn">Rent</a>
+                   </div>
+               </div>
+           </div>
+              <!-- Car 1 -->
+              <div class="car-item">
+               <div class="car-image">
+                   <img src="image/Chevrolet Corvette.png" alt="Red Sports Car">
+               </div>
+               <div class="car-details">
+                   <h2>Chevrolet Corvette</h2>
+                   <p>Price: $800,000</p>
+                   <div class="buttons">
+                       <a href="#" class="btn buy-btn">Buy Now</a>
+                       <a href="#" class="btn rent-btn">Rent</a>
+                   </div>
+               </div>
+           </div>
+              <!-- Car 1 -->
+              <div class="car-item">
+               <div class="car-image">
+                   <img src="image/Porsche 718 Boxster.png" alt="Red Sports Car">
+               </div>
+               <div class="car-details">
+                   <h2>Porsche 718 Boxster</h2>
+                   <p>Price: $600,000</p>
+                   <div class="buttons">
+                       <a href="#" class="btn buy-btn">Buy Now</a>
+                       <a href="#" class="btn rent-btn">Rent</a>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </section>
+
+    <!-- Car Details Modal -->
+<div id="car-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="car-title"></h2>
+        <img id="car-image" src="" alt="">
+        <p id="car-price"></p>
+        <button id="purchase-btn"  onclick="purchaseCar()">Purchase</button>
+        
+    
+    </div>
+</div>
+
+
+    <script src="Script.js"></script>
+</body>
+</html>

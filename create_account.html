@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .register-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: red;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: lightcoral;
+        }
+        .register-container a {
+            text-decoration: none;
+            color: lightcoral;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .register-container a:hover {
+            text-decoration: underline;
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Create an Account</h2>
+        <div class="error-message" id="error-message"></div>
+        <form id="registerForm">
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <input type="checkbox" onclick="myFunction()">Show Password
+            <input type="submit" value="Create Account">
+        </form>
+        <a href="Login.html">Already have an account? Login</a>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            // Simple validation check
+            if (name === '' || email === '' || password === '') {
+                errorMessage.textContent = "All fields are required.";
+                return;
+            }
+
+            // Save the user details in localStorage
+            const user = {
+                name: name,
+                email: email,
+                password: password
+            };
+            localStorage.setItem('registeredUser', JSON.stringify(user));
+
+            
+            // Retrieve saved user details from localStorage
+            const savedUser = JSON.parse(localStorage.getItem('registeredUser'));
+
+            // Check if the entered details match the saved user
+            if (savedUser && savedUser.email === email && savedUser.password === password) {
+                alert('Account created successfully!');
+                localStorage.setItem('isLoggedIn', true);
+                localStorage.setItem('loggedInUser', savedUser.name);
+                window.location.href = "Login.html";
+                // // Redirect to the homepage or any other page
+                // window.location.href = "index.html";
+            }  else {
+                errorMessage.textContent = "Invalid email or password.";
+            }
+        });
+       
+    </script>
+</body>
+</html>

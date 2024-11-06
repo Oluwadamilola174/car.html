@@ -1,0 +1,233 @@
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font-family: Arial, sans-serif;
+   background: linear-gradient(to bottom right, #f7f7f7, #ebebeb);
+}
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+   background-color: transparent;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+header .logo {
+   font-size: 18px;
+   font-weight: bold;
+}
+/* Style for the logo container */
+.logo {
+   display: flex;
+   align-items: center;
+   padding: 10px;
+   margin-top: 10px;
+}
+
+/* Style for the logo image */
+.logo img {
+   width: 50px; 
+   height: auto;
+   object-fit: contain;
+}
+
+
+nav ul {
+   list-style-type: none;
+   display: flex;
+}
+nav ul li {
+   margin-right: 20px;
+}
+nav ul li a {
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+}
+
+nav ul li a:hover {
+   color: lightcoral; 
+}
+.sports-car-section .content {
+   margin-bottom: 5px; 
+}
+
+.sports-car-section h1 {
+   font-size: 2.5em; 
+   color: red;
+   margin: 0;
+   font-weight: bold; 
+   letter-spacing: 1px; 
+}
+/* Styling for the sports car section */
+.sports-car-section {
+   padding: 40px 20px;
+   text-align: center;
+}
+
+.car-container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+.car-item {
+   border: 1px solid #ddd;
+   border-radius: 8px;
+   overflow: hidden;
+   width: calc(33% - 20px); /* Three cars per row with gaps */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   cursor: pointer;
+   transition: transform 0.3s ease;
+}
+.car-item:hover {
+   transform: scale(1.05);
+}
+.car-image img {
+   width: 100%;
+   height: auto;
+}
+
+.car-details {
+   padding: 15px;
+   text-align: center;
+}
+
+.car-details h2 {
+   margin: 0;
+   font-size: 1.2em;
+}
+
+.car-details p {
+   margin: 10px 0;
+   font-size: 1em;
+   color: #333;
+}
+
+.buttons {
+   margin-top: 10px;
+}
+
+.btn {
+   display: inline-block;
+   padding: 10px 20px;
+   margin: 5px;
+   color: #fff;
+   text-decoration: none;
+   border-radius: 5px;
+   background-color: red; 
+   transition: background-color 0.3s;
+}
+
+.btn.rent-btn {
+   background-color: white;
+   color: black;
+}
+
+.btn:hover {
+  background-color: lightcoral;
+   
+}
+.btn.rent-btn:hover{
+   background-color: lightcoral;
+}
+/* Style for the modal */
+.modal {
+   display: none; /* Hidden by default */
+   position: fixed; 
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto; 
+   background-color: rgb(0,0,0); 
+   background-color: rgba(0,0,0,0.4); 
+   padding-top: 60px; 
+}
+.modal-content {
+   background-color: #fefefe;
+   margin: 5% auto; 
+   padding: 20px;
+   border: 1px solid #888;
+   width: 80%; 
+   max-width: 600px;
+   position: relative;
+}
+
+.close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.color-options {
+    margin: 20px 0;
+}
+.color-option {
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   margin-right: 10px;
+   cursor: pointer;
+   border: 2px solid #000;
+}
+.login-btn {
+   background-color: red;
+   color: white;
+   padding: 10px 20px;
+   border-radius: 5px;
+   text-decoration: none;
+}
+.login-btn:hover{
+  background-color: lightcoral;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+   .car-container {
+       flex-direction: column;
+       overflow: hidden;
+   }
+
+  
+}
+
+.purchase-btn {
+   display: inline-block;
+   background-color: red;
+   color: white;
+   padding: 10px 20px;
+   text-align: center;
+   text-decoration: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.purchase-btn:hover {
+   background-color: lightcoral;
+}
+button{
+   display: inline-block;
+   padding: 10px 20px;
+   margin: 5px;
+   color: #fff;
+   text-decoration: none;
+   border-radius: 5px;
+   background-color: red; 
+   transition: background-color 0.3s;
+}
+button:hover{
+   background-color: lightcoral;
+}

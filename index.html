@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Car Sales - AutoLux International Co.</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">AutoLux International Co.</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Catalogue</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="Login.html" class="login-btn"  id="authLink">Log in</a>
+    </header>
+    <!-- Slideshow Container -->
+    <div class="slideshow-container">
+        <!-- Slides for Sports and Normal Cars -->
+        <div class="slide sports-slide">
+    <section class="main-container">
+        
+        <div class="content">
+            <h2>NEW IN STOCK</h2>
+            <h1>EXCLUSIVE<br> SPORTS CAR</h1>
+            <p><strong>Sports cars advanced features.</strong><br>
+            Sports cars offer advanced features and high-quality materials for a more comfortable driving experience.</p>
+            <div class="buttons">
+                <a href="Purchase .html" class="btn buy-btn">Buy Now</a>
+                <a href="sport car.html" class="btn see-btn">See more</a>
+            </div>
+        </div>
+        <!-- Car Image -->
+        <div class="car-image">
+            <img id="carImage" src="image/red-car.png" alt="Sports Car">
+
+        </div>
+    
+    
+    <div class="color-selection">
+        <div class="color red" onclick="document.getElementById('carImage').src='image/red-car.png'"></div>
+        <div class="color white" onclick="document.getElementById('carImage').src='image/white-car.png'"></div>
+        <div class="color black" onclick="document.getElementById('carImage').src='image/black-car.png'"></div>
+
+    </div>
+    </section>
+    </div>
+    <div class="slide normal-slide">
+        <section class="main-container">
+            <div class="content">
+                <h2>NEW IN STOCK </h2> 
+                <h1>RELIABLE NORMAL CAR</h1>
+                <p><strong>Normal cars for everyday use.</strong><br>
+                Our normal cars offer reliability and comfort for your daily needs with excellent value for money.</p>
+                <div class="buttons">
+                    <a href="#" class="btn buy-btn">Buy Now</a>
+                    <a href="#" class="btn see-btn">See more</a>
+                </div>
+            </div>
+            <div class="car-image">
+                <img id="carImage" src="image/brown-lexus.png" alt="Normal Car">
+            </div>
+           
+        </section>
+    </div>
+
+    <div class="slide normal-slide">
+        <section class="main-container">
+            <div class="content">
+                <h2>NEW IN STOCK </h2> 
+                <h1>Cycle Quest</h1>
+                <p><strong>Quality Bikes for Every Rider</strong><br>
+                    Hop on and explore our collection today. Your next adventure awaits at Cycle Quest—where every ride is an unforgettable journey.</p>
+                <div class="buttons">
+                    <a href="#" class="btn buy-btn">Buy Now</a>
+                    <a href="#" class="btn see-btn">See more</a>
+                </div>
+            </div>
+            <div class="car-image">
+                <img id="carImage" src="image/bike.png" alt="Normal Car">
+            </div>
+           
+        </section>
+    </div>
+    <!-- Navigation Arrows -->
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</div>
+
+    <script src="Script.js"></script>
+</body>
+</html>
